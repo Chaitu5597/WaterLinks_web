@@ -1,0 +1,608 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 16px;
+  --background: #ffffff;
+  --foreground: #495057;
+  --card: #ffffff;
+  --card-foreground: #495057;
+  --popover: oklch(1 0 0);
+  --popover-foreground: #495057;
+  --primary: #0077B6;
+  --primary-foreground: #ffffff;
+  --secondary: #009688;
+  --secondary-foreground: #ffffff;
+  --muted: #90E0EF;
+  --muted-foreground: #495057;
+  --accent: #FF6F00;
+  --accent-foreground: #ffffff;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(0, 0, 0, 0.1);
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --switch-background: #cbced4;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #0077B6;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --radius: 0.625rem;
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="%230077B6"><path d="M16 4 Q10 8, 12 16 Q14 24, 16 28 Q18 24, 20 16 Q22 8, 16 4 M16 28 Q14 32, 16 32 Q18 32, 16 28"/><circle cx="14" cy="10" r="2" fill="white"/></g></svg>') 16 16, auto;
+  }
+
+  button, a, [role="button"] {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="%23FF6F00"><path d="M16 4 Q10 8, 12 16 Q14 24, 16 28 Q18 24, 20 16 Q22 8, 16 4 M16 28 Q14 32, 16 32 Q18 32, 16 28"/><circle cx="14" cy="10" r="2" fill="white"/></g></svg>') 16 16, pointer;
+  }
+
+  input, textarea {
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><g fill="%23009688"><path d="M16 4 Q10 8, 12 16 Q14 24, 16 28 Q18 24, 20 16 Q22 8, 16 4 M16 28 Q14 32, 16 32 Q18 32, 16 28"/><circle cx="14" cy="10" r="2" fill="white"/></g></svg>') 16 16, text;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: var(--text-2xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: var(--text-xl);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: var(--text-lg);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: var(--text-base);
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+@keyframes float-uneven {
+  0% {
+    transform: translateY(0px);
+  }
+  15% {
+    transform: translateY(-8px);
+  }
+  30% {
+    transform: translateY(-4px);
+  }
+  45% {
+    transform: translateY(-12px);
+  }
+  60% {
+    transform: translateY(-6px);
+  }
+  75% {
+    transform: translateY(-10px);
+  }
+  90% {
+    transform: translateY(-3px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float-uneven {
+  animation: float-uneven 6s ease-in-out infinite;
+}
+
+@keyframes fishSwim {
+  0% {
+    transform: translateX(-50px) translateY(0px) scaleX(1);
+  }
+  48% {
+    transform: translateX(calc(100vw + 50px)) translateY(0px) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw + 50px)) translateY(0px) scaleX(-1);
+  }
+  98% {
+    transform: translateX(-50px) translateY(0px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-50px) translateY(0px) scaleX(1);
+  }
+}
+
+@keyframes fishJump {
+  0% {
+    transform: translateX(-50px) translateY(0px) scaleX(1);
+  }
+  10% {
+    transform: translateX(10vw) translateY(-30px) scaleX(1);
+  }
+  20% {
+    transform: translateX(20vw) translateY(0px) scaleX(1);
+  }
+  30% {
+    transform: translateX(30vw) translateY(-40px) scaleX(1);
+  }
+  40% {
+    transform: translateX(40vw) translateY(0px) scaleX(1);
+  }
+  48% {
+    transform: translateX(calc(100vw + 50px)) translateY(0px) scaleX(1);
+  }
+  50% {
+    transform: translateX(calc(100vw + 50px)) translateY(0px) scaleX(-1);
+  }
+  60% {
+    transform: translateX(60vw) translateY(-35px) scaleX(-1);
+  }
+  70% {
+    transform: translateX(40vw) translateY(0px) scaleX(-1);
+  }
+  80% {
+    transform: translateX(20vw) translateY(-30px) scaleX(-1);
+  }
+  90% {
+    transform: translateX(10vw) translateY(0px) scaleX(-1);
+  }
+  98% {
+    transform: translateX(-50px) translateY(0px) scaleX(-1);
+  }
+  100% {
+    transform: translateX(-50px) translateY(0px) scaleX(1);
+  }
+}
+
+.animate-fish-swim {
+  animation: fishSwim 12s linear infinite;
+}
+
+.animate-fish-jump {
+  animation: fishJump 12s linear infinite;
+}
+
+/* Footer Social Media Icons */
+.social-icon:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 20px currentColor, 0 0 30px currentColor;
+}
+
+/* Footer Map Button */
+.map-button:hover {
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Footer Links Underline Animation */
+.footer-link {
+  position: relative;
+  display: inline-block;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700;
+  transition: width 0.3s ease;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Animated circles for AQUA GREEN product */
+@keyframes float-circle-1 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  25% {
+    transform: translate(10px, -15px) scale(1.05);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-5px, -25px) scale(1.1);
+    opacity: 0.7;
+  }
+  75% {
+    transform: translate(-12px, -10px) scale(1.05);
+    opacity: 0.8;
+  }
+}
+
+@keyframes float-circle-2 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5;
+  }
+  33% {
+    transform: translate(-15px, 10px) scale(1.08);
+    opacity: 0.7;
+  }
+  66% {
+    transform: translate(8px, 20px) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-circle-3 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.6;
+  }
+  20% {
+    transform: translate(12px, -8px) scale(1.1) rotate(45deg);
+    opacity: 0.8;
+  }
+  40% {
+    transform: translate(20px, 5px) scale(1.15) rotate(90deg);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translate(8px, 15px) scale(1.05) rotate(180deg);
+    opacity: 0.8;
+  }
+  80% {
+    transform: translate(-5px, 8px) scale(1.08) rotate(270deg);
+    opacity: 0.6;
+  }
+}
+
+@keyframes float-circle-4 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.4;
+  }
+  40% {
+    transform: translate(-18px, -12px) scale(1.12);
+    opacity: 0.7;
+  }
+  80% {
+    transform: translate(10px, -20px) scale(1.06);
+    opacity: 0.5;
+  }
+}
+
+@keyframes float-circle-5 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.6;
+  }
+  30% {
+    transform: translate(15px, 12px) scale(1.1);
+    opacity: 0.8;
+  }
+  60% {
+    transform: translate(-10px, 18px) scale(1.15);
+    opacity: 0.7;
+  }
+  90% {
+    transform: translate(5px, 8px) scale(1.05);
+    opacity: 0.75;
+  }
+}
+
+@keyframes float-circle-6 {
+  0%, 100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.7;
+  }
+  25% {
+    transform: translate(-10px, -15px) scale(1.15) rotate(90deg);
+    opacity: 0.9;
+  }
+  50% {
+    transform: translate(8px, -20px) scale(1.2) rotate(180deg);
+    opacity: 0.8;
+  }
+  75% {
+    transform: translate(12px, -8px) scale(1.1) rotate(270deg);
+    opacity: 0.85;
+  }
+}
+
+.animate-float-circle-1 {
+  animation: float-circle-1 8s ease-in-out infinite;
+}
+
+.animate-float-circle-2 {
+  animation: float-circle-2 7s ease-in-out infinite;
+}
+
+.animate-float-circle-3 {
+  animation: float-circle-3 10s ease-in-out infinite;
+}
+
+.animate-float-circle-4 {
+  animation: float-circle-4 9s ease-in-out infinite;
+}
+
+.animate-float-circle-5 {
+  animation: float-circle-5 6s ease-in-out infinite;
+}
+
+.animate-float-circle-6 {
+  animation: float-circle-6 11s ease-in-out infinite;
+}
+
+/* Coastal Map Animations */
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 0.9;
+  }
+}
+
+@keyframes ping-slow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.5;
+  }
+}
+
+@keyframes wave-animation {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 3s ease-in-out infinite;
+}
+
+.coastal-dot {
+  animation: ping-slow 2s ease-in-out infinite;
+}
+
+.wave-animation {
+  animation: wave-animation 2s ease-in-out infinite;
+}
+
+.state-area {
+  transition: all 0.3s ease;
+}
+
+.state-area:hover {
+  fill: #B3E5FC;
+  stroke-width: 3;
+}
+
+/* Modern Dotted Map Animations */
+@keyframes dot-pulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.2);
+  }
+}
+
+@keyframes coastal-glow {
+  0%, 100% {
+    opacity: 0.7;
+    filter: brightness(1);
+  }
+  50% {
+    opacity: 1;
+    filter: brightness(1.5);
+  }
+}
+
+@keyframes connection-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes ocean-wave {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes label-fade {
+  0%, 100% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.state-dot {
+  animation: dot-pulse 4s ease-in-out infinite;
+}
+
+.coastal-glow-dot {
+  animation: coastal-glow 2s ease-in-out infinite;
+}
+
+.connection-line {
+  animation: connection-pulse 3s ease-in-out infinite;
+}
+
+.ocean-wave {
+  animation: ocean-wave 3s ease-in-out infinite;
+}
+
+.state-label {
+  animation: label-fade 4s ease-in-out infinite;
+}
+
+.bay-label {
+  animation: label-fade 5s ease-in-out infinite;
+}
+
+.state-group {
+  transition: all 0.3s ease;
+}
+
+.state-group:hover .state-dot {
+  opacity: 1;
+  animation-duration: 2s;
+}
+
+.state-group:hover .coastal-glow-dot {
+  filter: brightness(1.8);
+}
+
+.state-group:hover .state-label {
+  opacity: 1;
+  font-size: 24px;
+}

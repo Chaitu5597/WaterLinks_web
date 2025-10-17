@@ -1,5 +1,6 @@
 
-  # Deekshith
+  # Water lInks
+  
 
   This is a code bundle for Deekshith. The original project is available at https://www.figma.com/design/RVHshlM1eumKb68ys8mTJa/Deekshith.
 

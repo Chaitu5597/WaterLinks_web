@@ -46,6 +46,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
       isProductImage: true,
       category: "disease-control"
     },
+    
     {
       id: "sporex",
       name: "SPOREX",

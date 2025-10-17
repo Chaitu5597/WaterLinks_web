@@ -26,7 +26,7 @@ export function ProductsGrid({ onProductClick }: ProductsGridProps) {
     {
       id: "impetus",
       name: "IMPETUS",
-      tagline: "Guanylated Aqua Probiotics",
+      tagline: "Granulated Aqua Probiotics",
       image: "https://i.postimg.cc/8PjWxk5Y/Impetus.png",
       isProductImage: true
     },
@@ -87,10 +87,10 @@ export function ProductsGrid({ onProductClick }: ProductsGridProps) {
         <h2 className="text-primary mb-12 text-center" style={{ fontSize: '40px', fontWeight: 600 }}>
           Our Products
         </h2>
-        
+
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {products.map((product) => (
-            <Card 
+            <Card
               key={product.id}
               className="cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden group"
               onClick={() => onProductClick(product.id)}

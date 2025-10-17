@@ -33,7 +33,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "impetus",
       name: "IMPETUS",
-      tagline: "Guanylated Aqua Probiotics",
+      tagline: "Granulated Aqua Probiotics",
       image: "https://i.postimg.cc/8PjWxk5Y/Impetus.png",
       isProductImage: true,
       category: "probiotics"
@@ -41,16 +41,16 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "maricidin",
       name: "MARICIDIN",
-      tagline: "Nano Disinfectant for clean ponds",
+      tagline: "Nano Disinfectant ",
       image: "https://i.postimg.cc/59n9Lwx1/Maricidin.png",
       isProductImage: true,
       category: "disease-control"
     },
-    
+
     {
       id: "sporex",
       name: "SPOREX",
-      tagline: "EHP Control solution",
+      tagline: "EHP Control",
       image: "https://i.postimg.cc/25wMM7cx/Sporex.png",
       isProductImage: true,
       category: "disease-control"
@@ -58,7 +58,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "vibroshield",
       name: "VibroShield",
-      tagline: "Vibrio and Bacterial Control",
+      tagline: "Control Vibro Species",
       image: "https://i.postimg.cc/Wbq1cMBR/Vibro-Shield.png",
       isProductImage: true,
       category: "disease-control"
@@ -66,7 +66,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "marinox",
       name: "MarinoX",
-      tagline: "Guanylated Aqua Probiotics",
+      tagline: "Feed Supplement",
       image: "https://i.postimg.cc/Y9zHMmrj/Marinox.png",
       isProductImage: true,
       category: "feed-suppliment"
@@ -74,7 +74,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "ecocyst",
       name: "EcoCyst",
-      tagline: "EHP Control solution",
+      tagline: "Microcystis Control",
       image: "https://i.postimg.cc/nz7yT99V/Ecocyst.png",
       isProductImage: true,
       category: "algae-control"
@@ -82,7 +82,7 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "crustamin",
       name: "CrustaMin Pro",
-      tagline: "Trace mineral supplement",
+      tagline: "Feed Supplement",
       image: "https://i.postimg.cc/cJKCxh2Q/Crusta-MIN-Pro.png",
       isProductImage: true,
       category: "feed-suppliment"
@@ -90,15 +90,15 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
     {
       id: "detoxify-x",
       name: "Detoxify-X",
-      tagline: "Algae Control Solution",
+      tagline: "Pond Bottom Management",
       image: "https://i.postimg.cc/mgCpvW2Y/Detoxify.png",
       isProductImage: true,
       category: "pond-management"
     },
   ];
 
-  const filteredProducts = selectedCategory === "all" 
-    ? products 
+  const filteredProducts = selectedCategory === "all"
+    ? products
     : products.filter(p => p.category === selectedCategory);
 
   return (
@@ -131,11 +131,10 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
             <button
               key={category.id}
               onClick={() => setSelectedCategory(category.id)}
-              className={`px-6 py-3 rounded-lg transition-all duration-300 ${
-                selectedCategory === category.id
+              className={`px-6 py-3 rounded-lg transition-all duration-300 ${selectedCategory === category.id
                   ? "bg-primary text-white shadow-lg scale-105"
                   : "bg-white text-foreground hover:bg-primary/10 border-2 border-primary/20"
-              }`}
+                }`}
               style={{ fontSize: '15px', fontWeight: 600 }}
             >
               {category.name}
@@ -146,13 +145,13 @@ export function Products({ onProductClick, onBack }: ProductsProps) {
         {/* Products Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {filteredProducts.map((product) => (
-            <Card 
+            <Card
               key={product.id}
               className="group   hover:shadow-2xl transition-all duration-300 cursor-pointer border-2 border-primary/10 hover:border-primary/30 overflow-hidden"
               onClick={() => onProductClick(product.id)}
             >
               <CardContent className="p-6">
-                <div className="relative mb-6 bg-gradient-to-br from-muted/30 to-muted/10 rounded-xl p-8 flex items-center justify-center min-h-[280px] overflow-hidden"style={{  background: "linear-gradient(135deg, #fbfbfbff 0%, #a8effdff 100%)" }}>
+                <div className="relative mb-6 bg-gradient-to-br from-muted/30 to-muted/10 rounded-xl p-8 flex items-center justify-center min-h-[280px] overflow-hidden" style={{ background: "linear-gradient(135deg, #fbfbfbff 0%, #a8effdff 100%)" }}>
                   <div className="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   <img
                     src={product.image}

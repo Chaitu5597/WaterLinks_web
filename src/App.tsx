@@ -12,11 +12,13 @@ import { Footer } from "./components/Footer";
 import { ProductDetail } from "./components/ProductDetail";
 import { CoastalMap } from "./components/CoastalMap";
 import { Toaster } from "./components/ui/sonner";
+import { JoinOurNetwork } from "./components/JoinOurNetwork";
 
 export default function App() {
   const [currentView, setCurrentView] = useState<
-    "home" | "products" | "product-detail" | "downloads"
-  >("home");
+  "home" | "products" | "product-detail" | "downloads" | "join-network"
+>("home");
+
   const [selectedProduct, setSelectedProduct] = useState<
     string | null
   >(null);
@@ -36,12 +38,20 @@ export default function App() {
       setCurrentView("downloads");
       setSelectedProduct(null);
       window.scrollTo({ top: 0, behavior: "smooth" });
-    } else {
+    }
+    else if (section === "join-network") {
+  setCurrentView("join-network");
+  setSelectedProduct(null);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+ 
+    else {
       // For other sections (about, rnd, contact), go to home first if needed
       if (
         currentView === "product-detail" ||
         currentView === "products" ||
-        currentView === "downloads"
+        currentView === "downloads" 
+        
       ) {
         setCurrentView("home");
         setSelectedProduct(null);
@@ -93,6 +103,7 @@ export default function App() {
           <CoastalMap />
           <RnD />
           <Contact />
+          {/* <JoinOurNetwork /> */}
         </>
       )}
 
@@ -113,6 +124,10 @@ export default function App() {
           onBack={handleBackToProducts}
         />
       )}
+      {currentView === "join-network" && (
+  <JoinOurNetwork />
+)}
+
 
       <Footer onNavigate={handleNavigate} />
       <Toaster />

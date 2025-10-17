@@ -72,7 +72,7 @@ export function Hero({ onNavigate }: HeroProps) {
           <span style={{ color: '#FFD700' }}>The Scientific Way</span> to Sustainable Farming
         </h1>
         <p className="text-white/95 mb-8 max-w-3xl mx-auto" style={{ fontSize: '20px' }}>
-          Innovative aquaculture BioSolutions for healthier ponds, stronger shrimp, and sustainable productivity.
+          Innovative aquaculture biosolutions for healthier ponds, stronger shrimp, and sustainable productivity.
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">

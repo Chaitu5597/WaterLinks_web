@@ -180,7 +180,7 @@ export function CoastalMap() {
                 className="connection-line"
               />
               
-              <text x="530" y="360" fill="#0D9488" fontSize="22" fontWeight="700" className="state-label">Odisha</text>
+              <text x="530" y="360" fill="#3FBAD7" fontSize="22" fontWeight="700" className="state-label">Odisha</text>
             </g>
 
             {/* Andhra Pradesh - Emerald Green Glow */}
@@ -278,8 +278,8 @@ export function CoastalMap() {
             
             <div className="bg-white/80 backdrop-blur-sm px-6 py-4 rounded-xl shadow-lg border border-teal-200/50 hover:shadow-xl transition-all">
               <div className="flex items-center gap-3 mb-2">
-                <div className="w-4 h-4 rounded-full bg-teal-600 animate-pulse-slow" style={{ boxShadow: '0 0 10px rgba(13, 148, 136, 0.6)', animationDelay: '0.5s' }}></div>
-                <span className="text-teal-700" style={{ fontSize: '16px', fontWeight: 700 }}>Odisha</span>
+                <div className="w-4 h-4 rounded-full  animate-pulse-slow" style={{ boxShadow: '0 0 10px rgba(13, 148, 136, 0.6)', animationDelay: '0.5s',backgroundColor: "#3FBAD7" }}></div>
+                <span className="text-teal-700" style={{ fontSize: '16px', fontWeight: 700 , color: "#3FBAD7" }}>Odisha</span>
               </div>
               <p className="text-sm text-foreground/70">Teal Waters</p>
             </div>

@@ -39,27 +39,34 @@ export function Footer({ onNavigate }: FooterProps) {
           <div>
             <h4 className="mb-4" style={{ fontSize: '18px', fontWeight: 600 }}>Quick Links</h4>
             <div className="flex flex-col space-y-2">
-              <button 
+              {/* <button 
                 onClick={() => onNavigate('about')} 
                 className="footer-link text-left text-white/90 hover:text-white transition-colors relative"
               >
                 About Us
-              </button>
+              </button> */}
+              <button
+  onClick={() => onNavigate('about')}
+  className=" text-left hover:text-white transition-colors underline-offset-4 hover:underline"
+>
+  About Us
+</button>
+
               <button 
                 onClick={() => onNavigate('products')} 
-                className="footer-link text-left text-white/90 hover:text-white transition-colors relative"
+                className="text-left hover:text-white transition-colors underline-offset-4 hover:underline"
               >
                 Products
               </button>
               <button 
                 onClick={() => onNavigate('rnd')} 
-                className="footer-link text-left text-white/90 hover:text-white transition-colors relative"
+                className="text-left hover:text-white transition-colors underline-offset-4 hover:underline"
               >
                 R&D
               </button>
               <button 
                 onClick={() => onNavigate('contact')} 
-                className="footer-link text-left text-white/90 hover:text-white transition-colors relative"
+                className="text-left hover:text-white transition-colors underline-offset-4 hover:underline"
               >
                 Contact
               </button>
@@ -89,7 +96,12 @@ export function Footer({ onNavigate }: FooterProps) {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="map-button inline-flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300"
-                  style={{ fontSize: '14px', backgroundColor: '#39B7D5' }}
+                  style={{ fontSize: '14px',
+    backgroundColor: 'transparent',
+    border: '1px solid #39B7D5', // border color
+    borderRadius: '6px',          // optional rounded corners
+    padding: '6px 12px',          // optional padding
+    }}
                 >
                   <MapPin className="w-4 h-4 text-red-500" />
                   Get Directions

@@ -5,6 +5,8 @@
 
   export default defineConfig({
     plugins: [react()],
+    base: "/WaterLinks_web/",
+    
     resolve: {
       extensions: ['.js', '.jsx', '.ts', '.tsx', '.json'],
       alias: {

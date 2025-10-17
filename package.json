@@ -2,6 +2,8 @@
       "name": "Waterlinks",
       "version": "0.1.0",
       "private": true,
+      "homepage": "https://chaitu5597.github.io/WaterLinks_web/",
+
       "dependencies": {
             "@emailjs/browser": "^4.4.1",
             "@radix-ui/react-accordion": "^1.2.3",

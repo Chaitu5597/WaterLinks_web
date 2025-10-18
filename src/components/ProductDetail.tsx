@@ -226,15 +226,15 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
       ],
       // dosage: "Apply 5-10 kg per acre during pond preparation. Repeat every 30 days for optimal results.",
       additionalDosage: [
-        { des1: "Preparation", dat: "1MT per acre of pond." },
+        { des1: "Pond Preparation", dat: "1MT per acre of pond." },
         { des1: "Pond Management", dat: "25 to 50 kg per acre of pond." }
       ],
       composition: [
-        { component: "Organic Carbon", percentage: "40%" },
-        { component: "Humic Acids", percentage: "25%" },
-        { component: "Fulvic Acids", percentage: "15%" },
-        { component: "Trace Minerals", percentage: "10%" },
-        { component: "Bio-activators", percentage: "10%" },
+        { component: "Soil Organic Carbon", percentage: "40%" },
+        { component: "Natural Minerals", percentage: "25%" },
+        { component: "Bio-enhancers", percentage: "15%" },
+        // { component: "Trace Minerals", percentage: "10%" },
+        // { component: "Bio-activators", percentage: "10%" },
       ],
     },
     impetus: {
@@ -278,9 +278,9 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
       composition: [
         { component: "Silver-Based Metal Nanoparticles", percentage: "15%" },
         { component: "Stabilizing Agents and Inert Carriers", percentage: "20%" },
-        { component: "Organic acids", percentage: "25%" },
-        { component: "Surfactants", percentage: "10%" },
-        { component: "Water & stabilizers", percentage: "30%" },
+        // { component: "Organic acids", percentage: "25%" },
+        // { component: "Surfactants", percentage: "10%" },
+        // { component: "Water & stabilizers", percentage: "30%" },
       ],
       extraSection: {
         title: "Advanced Nano Technology",
@@ -350,7 +350,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
         "Mix 10 ml of VIBROSHIELD per 1kg of shrimp feed.",
       composition: [
         { component: "Nano Metal Particles", percentage: "40%" },
-        { component: "Stabilizing Agents and Inert Carriers", percentage: "20%" },
+        // { component: "Stabilizing Agents and Inert Carriers", percentage: "20%" },
         // { component: "Organic acids blend", percentage: "25%" },
         // { component: "Herbal extracts", percentage: "10%" },
         // { component: "Stabilizers", percentage: "5%" },
@@ -387,12 +387,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
       //   [" < 30 Days of Culture (DOC): Mix 3 mL per kg of feed > 30 DOC: Mix 5 mL per kg of feed",],
 
       additionalDosage: [
-        { des1: "< 30 Days of Culture (DOC): ", dat: "<  Mix 3 mL per kg of feed." },
-        { des1: "> 30 DOC: ", dat: " Mix 5 mL per kg of feed" }
+        { des1: "< 30 Days of Culture (DOC) ", dat: "<  Mix 3 mL per kg of feed." },
+        { des1: "> 30 DOC ", dat: " Mix 5 mL per kg of feed" }
       ],
       composition: [
-        { component: "Nano Selenium", percentage: "25%" },
-        { component: "Vitamin C (stabilized)", percentage: "30%" },
+        { component: "Nano-Selenium", percentage: "25%" },
+        { component: "Nano-Vitamin C ", percentage: "30%" },
         // { component: "Vitamin E", percentage: "15%" },
         // { component: "Amino acids", percentage: "20%" },
         // { component: "Carriers & binders", percentage: "10%" },
@@ -425,8 +425,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
         "Reduces toxin production",
         "Promotes beneficial phytoplankton",
       ],
-      dosage:
-        "2 liters per acre once every 15 days 2 liters per acre every 5–7 days until bloom subsides",
+      // dosage:
+      //   "2 liters per acre once every 15 days 2 liters per acre every 5–7 days until bloom subsides",
+       additionalDosage: [
+        { des1: "2 liters per acre once every 15 days.", dat: "" },
+        { des1: "2 liters per acre for every  5–7 days .", dat: "" }
+      ],
       composition: [
         { component: "Botanical Extracts", percentage: "35%" },
         { component: "Inert Carriers", percentage: "30%" },
@@ -465,8 +469,8 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
       // dosage:
         // "Mix 500g-1kg per ton of feed. Apply 2-3 kg per acre in water during molting periods.",
          additionalDosage: [
-        { des1: "Feed Supplementation:", dat: "Mix 5-10 grams of CrustaMin Pro per 1kg of feed." },
-        { des1: "Pond Application:", dat: "Apply 6kg per acre." }
+        { des1: "Feed Supplementation", dat: "Mix 5-10 grams of CrustaMin Pro per 1kg of feed." },
+        { des1: "Pond Application", dat: "Apply 6kg per acre." }
       ],
       composition: [
         { component: "Chelated Trace Minerals", percentage: "25%" },

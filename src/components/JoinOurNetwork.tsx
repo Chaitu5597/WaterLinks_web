@@ -135,9 +135,8 @@ export const JoinOurNetwork: React.FC = () => {
             />
             {message && (
               <div
-                className={`mt-4 text-center font-medium ${
-                  message.type === "success" ? "text-green-600" : "text-red-600"
-                }`}
+                className={`mt-4 text-center font-medium ${message.type === "success" ? "text-green-600" : "text-red-600"
+                  }`}
               >
                 {message.text}
               </div>
@@ -188,9 +187,8 @@ export const JoinOurNetwork: React.FC = () => {
             />
             {message && (
               <div
-                className={`mt-4 text-center font-medium ${
-                  message.type === "success" ? "text-green-600" : "text-red-600"
-                }`}
+                className={`mt-4 text-center font-medium ${message.type === "success" ? "text-green-600" : "text-red-600"
+                  }`}
               >
                 {message.text}
               </div>
@@ -248,9 +246,8 @@ export const JoinOurNetwork: React.FC = () => {
             />
             {message && (
               <div
-                className={`mt-4 text-center font-medium ${
-                  message.type === "success" ? "text-green-600" : "text-red-600"
-                }`}
+                className={`mt-4 text-center font-medium ${message.type === "success" ? "text-green-600" : "text-red-600"
+                  }`}
               >
                 {message.text}
               </div>
@@ -306,9 +303,8 @@ export const JoinOurNetwork: React.FC = () => {
             />
             {message && (
               <div
-                className={`mt-4 text-center font-medium ${
-                  message.type === "success" ? "text-green-600" : "text-red-600"
-                }`}
+                className={`mt-4 text-center font-medium ${message.type === "success" ? "text-green-600" : "text-red-600"
+                  }`}
               >
                 {message.text}
               </div>
@@ -332,13 +328,28 @@ export const JoinOurNetwork: React.FC = () => {
         Join Our Network
       </h2>
 
-      <div className="flex justify-center gap-6 mb-16 flex-wrap">
+      <div className="flex justify-center gap-6 mb-12 flex-wrap">
         {(["dealer", "farmer", "intern", "professional"] as TabType[]).map(tab => (
+          // <Button
+          //   key={tab}
+          //   onClick={() => setActiveTab(tab)}
+          //   variant={activeTab === tab ? "default" : "outline"}
+          //   style={{ minWidth: "120px", padding: "10px 80px", fontSize: "16px" }}
+          //   className="px-6 py-3 rounded-lg"
+          // >
+          //   {tab === "dealer" && "Dealer"}
+          //   {tab === "farmer" && "Farmer"}
+          //   {tab === "intern" && "Intern"}
+          //   {tab === "professional" && "Professional"}
+          // </Button>
           <Button
             key={tab}
             onClick={() => setActiveTab(tab)}
-            variant={activeTab === tab ? "default" : "outline"}
-            style={{ minWidth: "120px", padding: "10px 20px", fontSize: "16px" }}
+            className={`px-6 py-7 rounded-lg transition-all duration-300 ${activeTab === tab
+                ? "bg-primary text-white shadow-lg scale-105"
+                : "bg-white text-foreground hover:bg-primary/10 border-2 border-primary/20"
+              }`}
+            style={{ fontSize: "15px", fontWeight: 600 }}
           >
             {tab === "dealer" && "Dealer"}
             {tab === "farmer" && "Farmer"}

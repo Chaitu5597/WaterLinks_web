@@ -1,9 +1,8 @@
 {
-      "name": "Waterlinks",
+      "name": "waterlinks",
       "version": "0.1.0",
       "private": true,
       "homepage": "https://chaitu5597.github.io/WaterLinks_web/",
-
       "dependencies": {
             "@emailjs/browser": "^4.4.1",
             "@radix-ui/react-accordion": "^1.2.3",
@@ -55,11 +54,27 @@
             "@types/react": "^19.2.2",
             "@types/react-dom": "^19.2.1",
             "@vitejs/plugin-react-swc": "^3.10.2",
+            "autoprefixer": "^10.4.21",
+            "postcss": "^8.5.6",
+            "tailwindcss": "^4.1.14",
             "typescript": "^5.9.3",
             "vite": "^6.3.5"
       },
       "scripts": {
             "dev": "vite",
             "build": "vite build"
+      },
+      "description": "This is a code bundle for Deekshith. The original project is available at https://www.figma.com/design/RVHshlM1eumKb68ys8mTJa/Deekshith.",
+      "main": "index.js",
+      "repository": {
+            "type": "git",
+            "url": "git+https://github.com/Chaitu5597/WaterLinks_web.git"
+      },
+      "keywords": [],
+      "author": "",
+      "license": "ISC",
+      "type": "commonjs",
+      "bugs": {
+            "url": "https://github.com/Chaitu5597/WaterLinks_web/issues"
       }
 }

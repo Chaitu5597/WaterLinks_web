@@ -223,7 +223,7 @@ export function Footer({ onNavigate }: FooterProps) {
             <img
               src={footerLogo}
               alt="Water Links Scientific Solutions"
-              className="h-14 md:h-16 sm:h-12 w-auto mb-3"
+              className="h-12 md:h-16 sm:h-12 w-auto mb-3"
               
             />
             <p className="text-white/90 text-sm sm:text-base leading-relaxed">

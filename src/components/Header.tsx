@@ -350,7 +350,7 @@ export function Header({ onNavigate }: HeaderProps) {
 
   return (
     <>
-      <header className="header">
+      <header className="sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/80 header">
         <div className="header-container">
           {/* Logo */}
           <div className="logo" onClick={() => handleNavigate("home")}>
@@ -380,7 +380,7 @@ export function Header({ onNavigate }: HeaderProps) {
         {/* Mobile nav overlay */}
         <div className={`mobile-nav-overlay ${isMenuOpen ? "show" : ""}`}>
           {navItems.map((item) => (
-            <button key={item.id} onClick={() => handleNavigate(item.id)}>
+            <button  key={item.id} onClick={() => handleNavigate(item.id)}>
               {item.label}
             </button>
           ))}
@@ -409,7 +409,7 @@ export function Header({ onNavigate }: HeaderProps) {
 
         /* Logo */
         .logo img {
-          height: 56px;
+          height: 48px;
           cursor: pointer;
           transition: all 0.3s ease;
         }

@@ -343,9 +343,10 @@ export function Header({ onNavigate }: HeaderProps) {
     { label: "About Us", id: "about" },
     { label: "Products", id: "products" },
     { label: "R&D", id: "rnd" },
-    { label: "Contact", id: "contact" },
+    { label: "Career", id: "career" },
     { label: "Join our Network", id: "join-network" },
     { label: "Downloads", id: "downloads" },
+    { label: "Contact", id: "contact" },
   ];
 
   return (

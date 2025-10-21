@@ -297,7 +297,7 @@ export function Downloads({ onBack }: DownloadsProps) {
         </div>
 
         {/* Content Area */}
-        <div className="space-y-8">
+        <div className="space-y-8 max-w-6xl mx-auto">
           {/* Brochures Section */}
           {filteredMaterials.brochures.length > 0 && (
             <div>
@@ -360,3 +360,21 @@ export function Downloads({ onBack }: DownloadsProps) {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -211,6 +211,26 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
   //   }
   // };
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   const productsData: { [key: string]: any } = {
      "aqua-green": {
       name: "AQUA GREEN",
@@ -542,125 +562,157 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-muted/20 to-background">
-      {/* Back Button */}
-      <div className="container mx-auto px-4 lg:px-8 pt-24 pb-8">
-        {/* <Button 
-          onClick={onBack}
-          variant="ghost"
-          className="mb-8 bg-white/80 hover:bg-white/90 "
-        >
-          <ArrowLeft className="mr-2 h-4 w-4" />
-          Back to Products
-        </Button> */}
+      {/* Header / Back */}
+      <div className="container mx-auto px-8 lg:px-8 pt-8 pb-8">
         <button
           onClick={onBack}
           className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6 group"
         >
           <ArrowLeft className="h-5 w-5 group-hover:-translate-x-1 transition-transform" />
-          <span style={{ fontSize: '16px', fontWeight: 600 }}>Back to Products</span>
+          <span style={{ fontSize: "16px", fontWeight: 600 }}>Back to Products</span>
         </button>
 
-        {/* Product Overview - Image Left, Description Right */}
-        <div className="grid md:grid-cols-2 gap-12 mb-16">
-          {/* Left: Product Image */}
-          <div className="relative">
-            <div className="sticky top-24">
-              {productId === 'aqua-green' ? (
-                <div className="relative  rounded-lg  p-8 overflow-visible">
-                  {/* Animated decorative circles */}
-                  <div className="absolute inset-0 pointer-events-none">
-                    {/* Large light blue circle - top left */}
-                    {/* <div className="absolute top-[15%] left-[8%] w-28 h-28 rounded-full bg-muted/30 animate-float-circle-1"></div> */}
+        {/* Product Overview - Image Left (sticky), Description Right (scrolls as page) */}
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* LEFT: Sticky image at top */}
+          {/* <div className="md:sticky md:top-0 self-start">
+            {productId === "aqua-green" ? (
+              <div className="relative rounded-lg p-8 overflow-visible">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto object-contain animate-float-uneven scale-110 relative"
+                  style={{ top: "-10px" }}
+                />
+              </div>
+            ) : productId === "impetus" ||
+              productId === "maricidin" ||
+              productId === "sporex" ||
+              productId === "vibroshield" ||
+              productId === "marinox" ||
+              productId === "ecocyst" ||
+              productId === "crustamin" ||
+              productId === "detoxify-x" ? (
+              <div className="p-8 bg-white rounded-lg shadow-xl">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto object-contain animate-float-uneven scale-110 relative"
+                  style={{ top: "-10px" }}
+                />
+              </div>
+            ) : (
+              <div className="bg-white rounded-lg shadow-xl p-8">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-auto object-contain relative"
+                  style={{ top: "-10px" }}
+                />
+              </div>
+            )}
+          </div> */}
 
-                    {/* Medium light blue circle - bottom left */}
-                    {/* <div className="absolute bottom-[25%] left-[5%] w-16 h-16 rounded-full bg-muted/40 animate-float-circle-2"></div> */}
+          <div className="md:sticky md:top-0 self-start">
+  {productId === "aqua-green" ? (
+    <div className="relative rounded-lg p-8 overflow-visible">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-3/4 mx-auto h-auto object-contain animate-float-uneven relative"
+        style={{ top: "-10px" }}
+      />
+    </div>
+  ) : productId === "impetus" ||
+    productId === "maricidin" ||
+    productId === "sporex" ||
+    productId === "vibroshield" ||
+    productId === "marinox" ||
+    productId === "ecocyst" ||
+    productId === "crustamin" ||
+    productId === "detoxify-x" ? (
+    <div className="p-8 bg-white rounded-lg shadow-xl">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-1/4 mx-auto h-1/2 object-contain animate-float-uneven relative"
+        style={{ top: "-10px" }}
+      />
+    </div>
+  ) : (
+    <div className="bg-white rounded-lg shadow-xl p-8">
+      <img
+        src={product.image}
+        alt={product.name}
+        className="w-3/4 mx-auto h-auto object-contain relative"
+        style={{ top: "-10px" }}
+      />
+    </div>
+  )}
+</div>
 
-                    {/* Small light blue circle - top left corner */}
-                    {/* <div className="absolute top-[8%] left-[2%] w-12 h-12 rounded-full bg-muted/35 animate-float-circle-3"></div> */}
 
-                    {/* Large light blue circle - top right */}
-                    {/* <div className="absolute top-[12%] right-[10%] w-32 h-32 rounded-full bg-muted/25 animate-float-circle-4"></div> */}
-
-                    {/* Medium light blue circle - bottom right */}
-                    {/* <div className="absolute bottom-[15%] right-[5%] w-20 h-20 rounded-full bg-muted/35 animate-float-circle-5"></div> */}
-
-                    {/* Dark blue circle - left side */}
-                    {/* <div className="absolute top-[40%] left-[12%] w-10 h-10 rounded-full bg-primary/40 animate-float-circle-6"></div> */}
-
-                  </div>
-
-                  {/* Product image */}
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-auto object-contain relative z-10"
-                  />
-                </div>
-              ) : productId === 'impetus' || productId === 'maricidin' || productId === 'sporex' || productId === 'vibroshield' || productId === 'marinox' || productId === 'ecocyst' || productId === 'crustamin' || productId === 'detoxify-x' ? (
-                <div className="bg-white rounded-lg shadow-xl p-8">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-auto object-contain animate-float-uneven scale-110"
-                  />
-                </div>
-              ) : (
-                <div className="bg-white rounded-lg shadow-xl p-8">
-                  <img
-                    src={product.image}
-                    alt={product.name}
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
-              )}
-            </div>
-          </div>
-
-          {/* Right: Product Description */}
+          {/* RIGHT: Content scrolls normally */}
           <div>
+            <h1 className="text-primary mb-6" style={{ fontSize: "42px", fontWeight: 700, lineHeight: 1.2 }}>
+              {product.name}
+            </h1>
+
             <div className="mb-4">
-              <span className="inline-block px-4 py-1 bg-accent/10 text-accent rounded-full" style={{ fontSize: '14px', fontWeight: 600 }}>
+              <span
+                className="inline-block px-4 py-1 rounded-full"
+                style={{
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  backgroundColor: "rgba(0 , 150, 136 ,0.1)",
+                  color: "rgba(0 , 150, 136 ,1)",
+                }}
+              >
                 {product.tagline}
               </span>
             </div>
 
-            <h1 className="text-primary mb-6" style={{ fontSize: '42px', fontWeight: 700, lineHeight: 1.2 }}>
-              {product.name}
-            </h1>
-
             <div className="mb-8">
-              <h2 className="text-foreground mb-4" style={{ fontSize: '24px', fontWeight: 600 }}>
+              <h2 className="text-foreground mb-4" style={{ fontSize: "24px", fontWeight: 600 }}>
                 Product Description
               </h2>
-              <p className="text-foreground/80" style={{ fontSize: '16px', lineHeight: 1.8 }}>
+              <p className="text-foreground/80" style={{ fontSize: "16px", lineHeight: 1.8 }}>
                 {product.description}
               </p>
             </div>
-            
 
-            {/* Dosage Information */}
-            {/* <Card className="mb-8 border-l-4 border-l-accent">
+            {/* Composition */}
+            <div style={{ marginBottom: "50px" }}>
+              <h3 className="text-primary mb-4" style={{ fontSize: "20px", fontWeight: 600 }}>
+                Composition
+              </h3>
+              <div className="space-y-2">
+                {product.composition.map((item: any, index: number) => (
+                  <div key={index} className="flex justify-between items-center p-3 bg-muted/30 rounded">
+                    <span className="text-foreground" style={{ fontSize: "15px" }}>
+                      {item.component}
+                    </span>
+                    {/* {item.percentage && (
+                      <span className="text-primary" style={{ fontSize: "15px", fontWeight: 600 }}>
+                        {item.percentage}
+                      </span>
+                    )} */}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <Card className="border-l-4 border-l-accent mb-10">
               <CardContent className="p-6">
-                <h3 className="text-primary mb-3" style={{ fontSize: '18px', fontWeight: 600 }}>
+                <h3 className="text-primary mb-3" style={{ fontSize: "18px", fontWeight: 600 }}>
                   Dosage & Application
                 </h3>
-                <p className="text-foreground" style={{ fontSize: '16px' }}>
-                  {product.dosage}
-                </p>
-              </CardContent>
-            </Card> */}
-
-            <Card className="mb-8 border-l-4 border-l-accent">
-              <CardContent className="p-6">
-                <h3 className="text-primary mb-3" style={{ fontSize: '18px', fontWeight: 600 }}>
-                  Dosage & Application
-                </h3>
-                <p className="text-foreground mb-4" style={{ fontSize: '16px' }}>
+                <p className="text-foreground mb-4" style={{ fontSize: "16px" }}>
                   {product.dosage}
                 </p>
 
                 {product.additionalDosage && (
-                  <ul className="list-disc pl-5 space-y-2 text-foreground/80" style={{ fontSize: '16px', lineHeight: 1.8 }}>
+                  <ul className="list-disc pl-5 space-y-2 text-foreground/80" style={{ fontSize: "16px", lineHeight: 1.8 }}>
                     {product.additionalDosage.map((desc: any, index: number) => (
                       <li key={index}>
                         <strong>{desc.des1}:</strong> {desc.dat}
@@ -670,31 +722,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
                 )}
               </CardContent>
             </Card>
-
-            {/* Composition */}
-            <div>
-              <h3 className="text-primary mb-4" style={{ fontSize: '20px', fontWeight: 600 }}>
-                Composition
-              </h3>
-              <div className="space-y-2">
-                {product.composition.map((item: any, index: number) => (
-                  <div key={index} className="flex justify-between items-center p-3 bg-muted/30 rounded">
-                    <span className="text-foreground" style={{ fontSize: '15px' }}>
-                      {item.component}
-                    </span>
-                    {/* <span className="text-primary" style={{ fontSize: '15px', fontWeight: 600 }}>
-                      {item.percentage}
-                    </span> */}
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
         </div>
 
         {/* Key Benefits */}
         <div className="mb-16">
-          <h2 className="text-primary mb-8 text-center" style={{ fontSize: '32px', fontWeight: 600 }}>
+          <h2 className="text-primary mb-8 text-center" style={{ fontSize: "32px", fontWeight: 600 }}>
             Key Benefits
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
@@ -709,7 +742,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
                           <Icon className="w-5 h-5 text-secondary" />
                         </div>
                       </div>
-                      <p className="text-foreground flex-1" style={{ fontSize: '16px', lineHeight: 1.6 }}>
+                      <p className="text-foreground flex-1" style={{ fontSize: "16px", lineHeight: 1.6 }}>
                         {benefit}
                       </p>
                     </div>
@@ -720,8 +753,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           </div>
         </div>
 
-
-
+        {/* Extra Section */}
         {product.extraSection && (
           <div className="max-w-6xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">

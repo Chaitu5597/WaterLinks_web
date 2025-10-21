@@ -262,7 +262,7 @@ export function DownloadsDropdown({ isOpen, onClose }: DownloadsDropdownProps) {
                       <h3 className="text-primary" style={{ fontSize: '18px', fontWeight: 700 }}>
                         📘 Brochures
                       </h3>
-                    </div>
+                    </div>  
                     <div className="space-y-3">
                       {filteredMaterials.brochures.map((material) => (
                         <Card 

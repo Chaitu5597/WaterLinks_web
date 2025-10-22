@@ -12,6 +12,12 @@ import marinoxProductImage from "figma:asset/583f58778288ac74fd1412e8873372f8708
 import ecocystProductImage from "figma:asset/6a60b93fd54d4f7a489e0272a9519d050bdf3100.png";
 import crustaminProductImage from "figma:asset/d6ab9faa9ddffe1ca19a3536c5264a6060eccfcb.png";
 import detoxifyXProductImage from "figma:asset/75b74a47613e17f1c8eff360b420990e40935c6c.png";
+import sporexBottomImage from "../assets/sporex.jpg";
+import vibroBottomImage from "../assets/vibromin.jpg";
+import ecocystBottomImage from "../assets/ecocyst.jpg";
+import DetoxifyBottomImage from "../assets/Detoxify.jpg";
+import morinoxBottomImage from "../assets/marinox.jpg";
+
 
 interface ProductDetailProps {
   productId: string;
@@ -282,7 +288,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
     },
     maricidin: {
       name: "Maricidin",
-      tagline: "Nano Disinfectant for clean ponds",
+      tagline: "Nano Disinfectant",
       image: maricidinProductImage,
       description:
         "Maricidin is an advanced nano-technology based disinfectant that provides superior pathogen control while being safe for shrimp and the environment. This cutting-edge formulation offers broad-spectrum antimicrobial action to maintain pristine pond conditions.",
@@ -319,7 +325,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
     },
     sporex: {
       name: "Sporex",
-      tagline: "EHP Control solution",
+      tagline: "EHP Control",
       image: sporexProductImage,
       description:
         "Sporex is a specially formulated solution targeting Enterocytozoon hepatopenaei (EHP) in shrimp. This advanced formulation combines phytogenic extracts with probiotics to effectively manage EHP and support overall shrimp health and growth performance.",
@@ -350,12 +356,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           description:
             "Formulated with naturally derived ingredients, Sporex offers an eco-friendly alternative to chemical treatments while delivering consistent, reliable results in EHP management.",
         },
-        image: maricidinBottomImage,
+        image: sporexBottomImage,
       },
     },
     vibroshield: {
       name: "VibroShield",
-      tagline: "Vibrio Control for shrimp health",
+      tagline: "Control Vibro Species",
       image: vibroshieldProductImage,
       description:
         "VibroShield is an advanced Vibrio control solution utilizing competitive exclusion and natural antimicrobials. This powerful formulation effectively manages pathogenic Vibrio species while maintaining beneficial bacteria for optimal pond health.",
@@ -387,12 +393,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           description:
             "Field-tested across diverse aquaculture operations, VibroShield has consistently demonstrated significant reductions in Vibrio counts and improved survival rates in commercial shrimp farming.",
         },
-        image: maricidinBottomImage,
+        image: vibroBottomImage,
       },
     },
     marinox: {
       name: "MarinoX",
-      tagline: "Nano Selenium + Vitamin C",
+      tagline: "Feed Supplement",
       image: marinoxProductImage,
       description:
         "MarinoX is a premium antioxidant formulation combining nano selenium with vitamin C for enhanced bioavailability. This cutting-edge feed supplement supports shrimp immunity, promotes growth, and enhances stress resistance.",
@@ -429,7 +435,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           description:
             "Studies show that nano selenium provides up to 3x better absorption compared to conventional forms, ensuring your shrimp receive maximum nutritional benefit from every dose.",
         },
-        image: maricidinBottomImage,
+        image: morinoxBottomImage,
       },
     },
     ecocyst: {
@@ -470,12 +476,12 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           description:
             "EcoCyst can reduce microcystin levels by up to 80% within 72 hours of application, providing quick relief from toxic algal blooms and restoring pond health rapidly.",
         },
-        image: maricidinBottomImage,
+        image: ecocystBottomImage,
       },
     },
     crustamin: {
       name: "CrustaMin Pro",
-      tagline: "Chelated Mineral Supplement",
+      tagline: "Feed Supplement",
       image: crustaminProductImage,
       description:
         "CrustaMin Pro is a complete chelated mineral supplement formulated specifically for crustaceans. This premium feed supplement provides essential minerals in highly bioavailable form for optimal shell formation, successful molting, and enhanced growth.",
@@ -531,7 +537,7 @@ export function ProductDetail({ productId, onBack }: ProductDetailProps) {
           description:
             "Field trials demonstrate that Detoxify-X can reduce heavy metal concentrations by over 75% and significantly improve water quality parameters within one week of treatment.",
         },
-        image: maricidinBottomImage,
+        image: DetoxifyBottomImage,
       },
     },
   };

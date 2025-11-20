@@ -340,13 +340,13 @@ export function Header({ onNavigate }: HeaderProps) {
 
   const navItems = [
     { label: "Home", id: "home" },
-    { label: "About Us", id: "about" },
+    // { label: "About Us", id: "about" },
     { label: "Products", id: "products" },
-    { label: "R&D", id: "rnd" },
+    // { label: "R&D", id: "rnd" },
     { label: "Career", id: "career" },
     { label: "Join our Network", id: "join-network" },
     { label: "Downloads", id: "downloads" },
-    { label: "Contact", id: "contact" },
+    // { label: "Contact", id: "contact" },
   ];
 
   return (
